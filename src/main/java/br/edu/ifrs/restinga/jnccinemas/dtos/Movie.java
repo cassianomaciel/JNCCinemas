@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class Ticket {
-	
-	private Session session;
-	private Client client;
+public class Movie {
 
+	private String title;
+	private String duration;
+	
 }

@@ -1,5 +1,7 @@
 package br.edu.ifrs.restinga.jnccinemas.dtos;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,9 +11,11 @@ import lombok.NoArgsConstructor;
 @Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class Ticket {
+public class Theater {
 	
-	private Session session;
-	private Client client;
-
+	private String name;
+	private List<Session> sessions;
+	private String localization;
+	
+	
 }

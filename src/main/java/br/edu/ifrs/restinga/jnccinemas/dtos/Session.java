@@ -1,5 +1,7 @@
 package br.edu.ifrs.restinga.jnccinemas.dtos;
 
+import java.time.LocalDateTime;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,9 +11,10 @@ import lombok.NoArgsConstructor;
 @Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class Ticket {
+public class Session {
 	
-	private Session session;
-	private Client client;
-
+	private Movie movie;
+	private LocalDateTime schedule;
+	private Theater theater;
+	
 }
