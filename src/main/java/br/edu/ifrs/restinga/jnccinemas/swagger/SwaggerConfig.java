@@ -17,13 +17,14 @@ public class SwaggerConfig {
 	
 	@Bean
 	public Docket apiConfigDocs() {
-		return new Docket(DocumentationType.SWAGGER_2).select()
+		return new Docket(DocumentationType.SWAGGER_2)
+				.groupName("jnccinemas")
+				.select()
 				.apis(RequestHandlerSelectors.basePackage("br.edu.ifrs.restinga.jnccinemas"))
-				.paths(PathSelectors.any()).build().apiInfo(metaData());
-	}
-
-	private ApiInfo metaData() {
-		return new ApiInfoBuilder().title("JNC CINEMAS").description("\"\"")
-				.version("1.0.0").build();
+				.paths(PathSelectors.any())
+				.build()
+				.apiInfo(new ApiInfoBuilder().version("1.0")
+					.title("JNC CINEMAS API")
+					.build());
 	}
 }
