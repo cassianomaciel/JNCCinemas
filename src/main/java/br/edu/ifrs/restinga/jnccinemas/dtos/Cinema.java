@@ -20,10 +20,10 @@ public class Cinema {
 	public String id;
 	 
 	private String nome;
-	private List<Salas> salas;
-	List<String> filmesDisponiveis;
-	private String localizacao;
-	private Map<Integer, String> avaliacoes;
+	//private List<Salas> salas;
+	//List<String> filmesDisponiveis;
+	//private String localizacao;
+	//private Map<Integer, String> avaliacoes;
 	
 	
 }
