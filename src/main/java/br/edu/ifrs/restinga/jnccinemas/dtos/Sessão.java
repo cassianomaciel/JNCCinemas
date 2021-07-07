@@ -13,8 +13,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Sessão {
 	
-	private Filme movie;
-	private LocalDateTime schedule;
-	private Cinema theater;
+	private Filme filme;
+	private LocalDateTime horario;
+	private Cinema cinema;
 	
 }

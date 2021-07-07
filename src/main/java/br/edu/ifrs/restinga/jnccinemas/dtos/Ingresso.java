@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Ingresso {
 	
-	private Sessão session;
-	private Cliente client;
+	private Sessão sessao;
+	private Cliente cliente;
 
 }

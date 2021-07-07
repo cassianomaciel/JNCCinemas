@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Filme {
 
-	private String title;
-	private String duration;
+	private String nome;
+	private String duracao;
 	
 }

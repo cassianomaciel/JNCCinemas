@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Cliente {
 
-	private String name;
+	private String nome;
 	
 }
