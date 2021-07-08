@@ -1,6 +1,6 @@
 package br.edu.ifrs.restinga.jnccinemas.dtos;
 
-import java.util.List;
+import java.math.BigDecimal;
 
 import org.springframework.data.annotation.Id;
 
@@ -13,12 +13,10 @@ import lombok.NoArgsConstructor;
 @Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class Sala {
+public class Cadeira {
 	
 	@Id
 	public String id;
 	
-	private Integer numero;
-	private List<Cadeira> cadeiras;
-	
+	private String identificador;
 }

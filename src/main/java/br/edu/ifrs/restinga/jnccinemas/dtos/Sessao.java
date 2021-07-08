@@ -1,6 +1,7 @@
 package br.edu.ifrs.restinga.jnccinemas.dtos;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,8 +15,6 @@ import lombok.NoArgsConstructor;
 public class Sessao {
 	
 	private Filme filme;
-	private LocalDateTime horario;
-	private Cinema cinema;
+	private LocalDateTime data;
 	private Sala sala;
-	
 }
