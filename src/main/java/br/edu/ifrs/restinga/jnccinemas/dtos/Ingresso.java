@@ -1,5 +1,7 @@
 package br.edu.ifrs.restinga.jnccinemas.dtos;
 
+import java.math.BigDecimal;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,7 +13,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Ingresso {
 	
-	private Sessão sessao;
-	private Cliente cliente;
+	private BigDecimal preco;
+	private Sessao sessao;
+	
 
 }

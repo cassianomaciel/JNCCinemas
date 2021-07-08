@@ -11,10 +11,11 @@ import lombok.NoArgsConstructor;
 @Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class Sessão {
+public class Sessao {
 	
 	private Filme filme;
 	private LocalDateTime horario;
 	private Cinema cinema;
+	private Sala sala;
 	
 }
