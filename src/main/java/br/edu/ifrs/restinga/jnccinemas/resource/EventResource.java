@@ -23,7 +23,7 @@ public class EventResource {
 	@ApiOperation(value = "Api para persistência de eventos")
 	@PostMapping("/cadastraEvento")
 	@ResponseBody
-	public ResponseEntity<AbstractEvent> createTicket(
+	public ResponseEntity<AbstractEvent> createEvent(
 			@ApiParam(value = "Evento a ser cadastrado", required = true) @RequestBody @Valid AbstractEvent event)
 			throws Exception {
 		return ResponseEntity.ok(eventService.saveEvent(event));

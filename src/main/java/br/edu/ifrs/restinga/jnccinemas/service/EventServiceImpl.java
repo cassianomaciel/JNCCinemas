@@ -11,14 +11,18 @@ import org.springframework.stereotype.Service;
 public class EventServiceImpl implements EventService {
 
 	private EventRepository eventRepository;
-	
+
 	public EventServiceImpl(EventRepository eventRepository) {
 		this.eventRepository = eventRepository;
 	}
 
 	@Override
 	public AbstractEvent saveEvent(AbstractEvent event) {
-		return eventRepository.save(event);
+		if (event.getId() == null) {
+			return eventRepository.insert(event);
+		} else {
+			return eventRepository.save(event);
+		}
 	}
 
 	@Override
@@ -27,7 +31,7 @@ public class EventServiceImpl implements EventService {
 		if (option == null) {
 			throw new InvalidFilterException("Filter not found for value " + filterOption);
 		}
-		//TODO implement multiple searches
+		// TODO implement multiple searches
 		return null;
 	}
 
