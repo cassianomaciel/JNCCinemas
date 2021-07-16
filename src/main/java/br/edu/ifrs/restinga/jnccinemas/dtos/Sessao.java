@@ -13,8 +13,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Sessao {
-	
-	private Filme filme;
-	private LocalDateTime data;
+
+	private Movie filme;
+	private LocalDateTime start;
+	private LocalDateTime end;
+	private List<LocalDateTime> days;
 	private Sala sala;
 }

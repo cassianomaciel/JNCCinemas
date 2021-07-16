@@ -1,4 +1,4 @@
-package br.edu.ifrs.restinga.jnccinemas.controller;
+package br.edu.ifrs.restinga.jnccinemas.resource;
 
 import javax.validation.Valid;
 
@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.edu.ifrs.restinga.jnccinemas.business.CinemaBusiness;
 import br.edu.ifrs.restinga.jnccinemas.dtos.Cinema;
+import br.edu.ifrs.restinga.jnccinemas.service.CinemaService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
 @RestController
-public class CinemaController {
+public class CinemaResource {
 
 	
 	@Autowired
-	private CinemaBusiness cinemaBusiness;
+	private CinemaService cinemaBusiness;
 	
 	@ApiOperation(value = "Api operation modelo pra noix")
 	@PostMapping("/cadastraCinema")
