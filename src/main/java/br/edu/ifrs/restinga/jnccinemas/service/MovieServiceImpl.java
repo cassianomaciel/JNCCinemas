@@ -1,5 +1,6 @@
 package br.edu.ifrs.restinga.jnccinemas.service;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -35,22 +36,25 @@ public class MovieServiceImpl implements MovieService {
 		}
 		switch (option) {
 		case CAST:
-			break;
+			return eventRepository.findAllByCastContainingIgnoreCase(value);
 		case DESCRIPTION:
 			return eventRepository.findAllByDescriptionContainingIgnoreCase(value);
 		case DIRECTOR:
-			break;
+			return eventRepository.findAllByDirectorsContainingIgnoreCase(value);
 		case GENRE:
-			break;
+			return eventRepository.findAllByGenreContainingIgnoreCase(value);
 		case NAME:
 			return eventRepository.findAllByNameContainingIgnoreCase(value);
 		case WRITER:
-			break;
+			return eventRepository.findAllByWritersContainingIgnoreCase(value);
 		default:
-			break;
+			return Collections.emptyList();
 		}
-		// TODO implement multiple searches
-		return null;
+	}
+
+	@Override
+	public List<Movie> findAllEvents() {
+		return eventRepository.findAll();
 	}
 
 }
