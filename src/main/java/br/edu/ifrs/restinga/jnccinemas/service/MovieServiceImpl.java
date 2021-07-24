@@ -1,23 +1,25 @@
 package br.edu.ifrs.restinga.jnccinemas.service;
 
-import br.edu.ifrs.restinga.jnccinemas.dtos.AbstractEvent;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import br.edu.ifrs.restinga.jnccinemas.dtos.Movie;
 import br.edu.ifrs.restinga.jnccinemas.enums.FilterOption;
 import br.edu.ifrs.restinga.jnccinemas.exceptions.InvalidFilterException;
 import br.edu.ifrs.restinga.jnccinemas.repository.EventRepository;
-import java.util.Optional;
-import org.springframework.stereotype.Service;
 
 @Service
-public class EventServiceImpl implements EventService {
+public class MovieServiceImpl implements MovieService {
 
 	private EventRepository eventRepository;
 
-	public EventServiceImpl(EventRepository eventRepository) {
+	public MovieServiceImpl(EventRepository eventRepository) {
 		this.eventRepository = eventRepository;
 	}
 
 	@Override
-	public AbstractEvent saveEvent(AbstractEvent event) {
+	public Movie saveEvent(Movie event) {
 		if (event.getId() == null) {
 			return eventRepository.insert(event);
 		} else {
@@ -26,10 +28,26 @@ public class EventServiceImpl implements EventService {
 	}
 
 	@Override
-	public Optional<AbstractEvent> searchEvent(String filterOption, String value) {
+	public List<Movie> searchEvent(String filterOption, String value) {
 		FilterOption option = FilterOption.findByFilterLabel(filterOption);
 		if (option == null) {
 			throw new InvalidFilterException("Filter not found for value " + filterOption);
+		}
+		switch (option) {
+		case CAST:
+			break;
+		case DESCRIPTION:
+			return eventRepository.findAllByDescriptionContainingIgnoreCase(value);
+		case DIRECTOR:
+			break;
+		case GENRE:
+			break;
+		case NAME:
+			return eventRepository.findAllByNameContainingIgnoreCase(value);
+		case WRITER:
+			break;
+		default:
+			break;
 		}
 		// TODO implement multiple searches
 		return null;

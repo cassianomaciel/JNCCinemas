@@ -8,7 +8,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum FilterOption {
 
-	NAME("nome"), CAST("elenco"), GENRE("genero"), WRITER("escritor"), DIRECTOR("diretor");
+	NAME("nome"), CAST("elenco"), GENRE("genero"), WRITER("escritor"), DIRECTOR("diretor"), DESCRIPTION("descrição");
 
 	private String filterLabel;
 

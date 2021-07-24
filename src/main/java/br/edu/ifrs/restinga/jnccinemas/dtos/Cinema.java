@@ -24,8 +24,6 @@ public class Cinema {
 	private List<Sala> salas;
 	List<String> filmes;
 	List<Sessao> sessoes;
-	private String localizacao;
-	
-	
+	private String localizacao;	
 	
 }
