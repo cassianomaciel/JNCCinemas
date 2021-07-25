@@ -19,7 +19,7 @@ public class Ingresso {
 	public String id;
 	
 	private BigDecimal preco;
-	private Sessao sessao;
-	private Cadeira cadeira;
+	private Session sessao;
+	private Seat cadeira;
 
 }

@@ -1,9 +1,8 @@
 package br.edu.ifrs.restinga.jnccinemas.dtos;
 
-import java.math.BigDecimal;
-
 import org.springframework.data.annotation.Id;
 
+import br.edu.ifrs.restinga.jnccinemas.enums.SeatType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,10 +12,12 @@ import lombok.NoArgsConstructor;
 @Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class Cadeira {
+public class Seat {
 	
 	@Id
 	public String id;
 	
-	private String identificador;
+	private String identifier;
+	
+	private SeatType seatType;
 }

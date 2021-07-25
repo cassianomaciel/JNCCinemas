@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.edu.ifrs.restinga.jnccinemas.dtos.Movie;
-import br.edu.ifrs.restinga.jnccinemas.enums.FilterOption;
 import br.edu.ifrs.restinga.jnccinemas.service.MovieService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
