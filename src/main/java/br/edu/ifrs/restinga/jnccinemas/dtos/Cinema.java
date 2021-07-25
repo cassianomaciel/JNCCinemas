@@ -21,9 +21,22 @@ public class Cinema {
 	public String id;
 	 
 	private String nome;
+	
+	private String state;
+	
+	private String city;
+	
+	private String address;
+	
+	private String neighborhood;
+
+    private Double latitude;
+    
+    private Double longitude;
+    
 	private List<Sala> salas;
-	List<String> filmes;
-	List<Sessao> sessoes;
-	private String localizacao;	
+	private List<String> filmes;
+	private List<Sessao> sessoes;
+
 	
 }
